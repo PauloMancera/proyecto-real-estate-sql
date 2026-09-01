@@ -139,10 +139,7 @@ Todas las consultas están comentadas en [`consultas.sql`](./consultas.sql).
 ```markdown
 ![Top 5 ciudades más caras](screenshots/top5_ciudades.png)
 ![Promedio móvil de precios](screenshots/promedio_movil.png)
-![Ranking por ciudad](screenshots/ranking_ciudad.png)
 ```
-
-Recomendación: incluye al menos 3 capturas — una consulta básica, una con CTE/subquery, y una con función de ventana — para mostrar progresión de complejidad.
 
 ## 🚀 Cómo reproducir este proyecto
 
@@ -181,7 +178,7 @@ Recomendación: incluye al menos 3 capturas — una consulta básica, una con CT
 
 ## 👤 Autor
 
-**Tu nombre** — *(agrega tu LinkedIn, GitHub y/o portafolio aquí)*
+**Paulo Andres Mancera Silva**
 
 ---
 <div align="center">
