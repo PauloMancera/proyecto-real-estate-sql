@@ -33,7 +33,7 @@
 
 ## 📋 Descripción del problema
 
-Este proyecto analiza el **[USA Real Estate Dataset](https://www.kaggle.com/)** *(agrega aquí el link exacto)* para responder preguntas reales de negocio sobre precios, distribución geográfica y tendencias del mercado inmobiliario en Estados Unidos — **usando únicamente SQL**, desde la carga del dato crudo hasta análisis con funciones de ventana.
+Este proyecto analiza el **[USA Real Estate Dataset]([https://www.kaggle.com](https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset)/)** para responder preguntas reales de negocio sobre precios, distribución geográfica y tendencias del mercado inmobiliario en Estados Unidos — **usando únicamente SQL**, desde la carga del dato crudo hasta análisis con funciones de ventana.
 
 El objetivo no fue solo escribir consultas, sino simular el flujo de trabajo real de un analista: cargar datos imperfectos, resolver los problemas que aparecen en el camino, y documentar decisiones con criterio.
 
@@ -124,7 +124,6 @@ Todas las consultas están comentadas en [`consultas.sql`](./consultas.sql).
 
 ## 💡 Insights principales
 
-> Reemplaza cada punto con tus números reales — la especificidad es lo que distingue un insight de una afirmación genérica.
 
 1. **Dispersión de precios entre estados** El precio promedio nacional es de **$524,261.50**. Sin embargo, varía drásticamente por estado: Hawaii lidera con un promedio de $1,240,095.30, casi el doble del promedio nacional, mientras que West Virginia cierra la tabla       con $240,045.93 — una diferencia de más de    5 veces entre el estado más caro y el más económico (excluyendo valores nulos y el registro atípico de "New Brunswick", que con solo $2,500 es claramente un dato mal cargado).
 2. **Detección de outliers antes de confiar en rankings de precio** Al ejecutar la consulta de "ciudades más caras" sin un filtro de cantidad mínima de propiedades, el resultado arroja cifras imposibles: una ciudad llamada "International" con un precio promedio de         $2,147,483,600 (más de 2 mil millones de dólares), y otras como "Wayne City" ($43.3M) o "Kawaihae" ($25M). Esto no refleja mercados reales, sino errores de captura de datos o valores centinela (2,147,483,647 es, de hecho, el valor máximo de un entero de 32 bits — un   clásico error de sistema, no un precio real). Esto es un hallazgo de calidad de datos crucial: antes de reportar "ciudades más caras", hay que aplicar HAVING COUNT(*) > N para excluir ciudades con muy pocas propiedades, y filtrar valores de precio absurdamente altos.
