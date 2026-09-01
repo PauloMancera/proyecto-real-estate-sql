@@ -134,12 +134,10 @@ Todas las consultas están comentadas en [`consultas.sql`](./consultas.sql).
 
 ## 📸 Capturas de resultados
 
-> Agrega tus propias capturas de SSMS ejecutando las consultas clave. Guárdalas en una carpeta `screenshots/` en la raíz del repo y enlázalas así:
 
-```markdown
 ![Top 5 ciudades más caras](screenshots/top5_ciudades.png)
 ![Promedio móvil de precios](screenshots/promedio_movil.png)
-```
+
 
 ## 🚀 Cómo reproducir este proyecto
 
